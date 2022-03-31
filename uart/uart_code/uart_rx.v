@@ -28,14 +28,14 @@ wire rx_nedge;
 
 always@(posedge clk or negedge rst_n) begin
     if(rst_n == 1'b0) begin 
-    rx_ff1 <= 1'b0;
-    rx_ff2 <= 1'b0;
-    rx_ff3 <= 1'b0;
+        rx_ff1 <= 1'b0;
+        rx_ff2 <= 1'b0;
+        rx_ff3 <= 1'b0;
     end 
     else begin 
-    rx_ff1 <= rx_data;
-    rx_ff2 <= rx_ff1;
-    rx_ff3 <= rx_ff2;
+        rx_ff1 <= rx_data;
+        rx_ff2 <= rx_ff1;
+        rx_ff3 <= rx_ff2;
     end 
 end 
 
